@@ -138,8 +138,8 @@ void setup()
 
 void ButtonTest(homekit_service_t *service, char *str)
 {
-    button_event_t a = button_event_long_press;
-    buttonhandler_callback(service, a);
+    button_event_t event_type = button_event_single_press;
+    buttonhandler_callback(service, event_type);
     canvas.fillCanvas(0);
     canvas.drawString(str, 100, 0);
     canvas.pushCanvas(0, 300, UPDATE_MODE_DU4);
